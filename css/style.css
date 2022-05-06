@@ -1,0 +1,137 @@
+body{
+    background-color: #282828;
+    color: white;
+    padding: 15px;
+    font-family: 'Poppins';
+    max-width: 1300px;
+    margin: 0 auto 0 auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    border-bottom: 2px solid goldenrod;
+}
+
+.navbar{
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
+ul{
+    margin: 0;
+    padding-top: 20px;
+    font-size: 20px;
+}
+
+li{
+    display: inline-block;
+    margin: 30px;
+    
+}
+
+.linkEntrar:hover{
+    border: solid 1px goldenrod;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    background-color: goldenrod;
+    transition: all 0.3s;
+}
+
+a{
+    color: white;
+}
+
+a:hover{
+    color: goldenrod;
+    transition: all 0.3s;
+}
+
+
+
+.title{
+    margin-top: 20px;
+    line-height: 10px;
+
+}
+
+.title_2{
+    margin-left: 10px;
+}
+
+h1{
+    font-weight: 300;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h3{
+    font-size: 40px;
+    margin: 0;
+    padding-top: 50px;
+}
+
+p{
+    margin: 0;
+    list-style: 10px;
+}
+
+h4{
+    margin: 20px 0 0 0;
+}
+
+h5{
+    margin: 0;
+    font-size: 30px;
+}
+
+article{
+    margin-left: 30px;
+
+}
+
+img{
+    height: 600px;
+    width: 600px;
+    margin-bottom: 200px;
+    margin-left: 50px;
+    border-radius: 50px;
+}
+
+form{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+
+input{
+    margin-top: 20px;
+    height: 15px;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+}
+
+.subm{
+    width: 200px;
+    margin-left: 140px;
+    padding: 15px;
+    background-color: white;
+    font-family: 'Poppins';
+    height: 50%;
+    font-weight: 500;
+
+}
+
+.subm:hover{
+    cursor: pointer;
+    background-color: goldenrod;
+    transition: all 0.3s;
+}
