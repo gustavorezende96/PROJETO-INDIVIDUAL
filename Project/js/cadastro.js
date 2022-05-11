@@ -4,23 +4,42 @@ function entrar(){
     var eemail = email.value;
     var password = senha.value;
 
-    if(nomee.length == 0){
-        alert("OPSS, Parece que você não preencheu seu nome!")
+    if(nomee.length == 0){    
+        Swal.fire({
+        icon: 'info',
+        title: 'Oops...',
+        text: 'Você se esqueceu de informar seu nome!',
+    })
     }
     else if(eemail.indexOf("@") == -1){
-        alert("Insira um e-mail válido!")
+        Swal.fire({
+            icon: 'info',
+            title: 'E-mail inválido!',
+            text: 'Por favor, verifique se o e-mail inserido é um email válido!',
+        })
     }
     else if(password.length == 0){
-        alert("Insira uma senha!")
+        Swal.fire({
+            icon: 'error',
+            title: 'Senha obrigatória!',
+            text: 'Por favor, insira uma senha!',
+        })
     }
     else if(password.length < 5){
-        alert("Sua senha está muito fraca! Digite uma senha com pelo ou menos 5 caractéres.")
+        Swal.fire({
+            icon: 'info',
+            title: 'Senha fraca!',
+            text: 'Uma senha forte deve conter no minímo 5 caractéres.',
+        })
         }
-    else{
-        alert("sucesso")
-        setTimeout(() => {
-            window.location = "login.html";
-        }, "2000")
-    } 
+        else{
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: 'Cadastro bem-sucedido!',
+                showConfirmButton: false,
+                timer: 1500
+              })
+        } 
 }
       
