@@ -9,9 +9,7 @@
     <link rel="stylesheet" href="css/cadastro.css">
     <script src="js/cadastro.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet">
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="sweetalert2.min.js"></script>
-    <link rel="stylesheet" href="sweetalert2.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
 </head>
 <body>
 
@@ -36,17 +34,17 @@
                 <br>
                 <span class="eldenlorde">Cadastre-se e se torne o Elden Lorde!</span>
             </h3>
-            <form>
+            <div class="form">
                 <input id="nome" type="text" placeholder="Como gostaria de ser chamado?">
                 <input id="email" type="email" placeholder="Insira seu melhor e-mail!">
                 <input id="senha" type="password" placeholder="Insira uma senha forte como você!">
-                <button onclick="entrar()" class="botao_entrar">Cadastrar-se</button>
+                <button onclick="entrar()" class="botao_entrar" type="button">Cadastrar-se</button>
             
             <h5>Já tem uma conta?</h5>
             <div class="link_entrar">
                 <a href="login.html" class="link-cadastro">Entrar</a>
             </div>
-        </form>
+            </div>
         </aside>
 
         <article>

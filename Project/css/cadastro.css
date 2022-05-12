@@ -170,7 +170,7 @@ img {
     border-radius: 50px;
 }
 
-form {
+.form {
     display: flex;
     width: 500px;
     flex-direction: column;
