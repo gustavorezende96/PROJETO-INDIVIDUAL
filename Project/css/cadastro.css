@@ -20,6 +20,40 @@ header {
     align-items: center;
 }
 
+.nome_input, .email_input{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+
+.senha_input{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+
+.button_icone{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+}
+
+.mostrar_botao{
+    display: flex;
+    flex-direction: row;
+    margin-left: 460px;
+    position: absolute;
+    margin-top: 35px;
+}
+
+i{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
 .sobre-cor {
     color: #f6a001;
 }
@@ -63,11 +97,13 @@ a {
 a:hover {
     color: #f6a001;
     transition: all 0.3s;
-
-
 }
 
-
+.senharevelar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
 
 
 .title {

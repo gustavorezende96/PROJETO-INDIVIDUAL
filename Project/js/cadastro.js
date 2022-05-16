@@ -81,3 +81,14 @@ function entrar(){
         } 
 }
       
+    function revelar(){
+    var senha_revel = document.getElementById("senha");
+
+        if(senha_revel.type == "password"){
+            senha_revel.type = "text";
+        }
+        else{
+            senha_revel.type = "password"
+        }
+
+    }
