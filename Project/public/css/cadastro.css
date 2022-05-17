@@ -20,6 +20,40 @@ header {
     align-items: center;
 }
 
+.nome_input, .email_input{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+
+.senha_input{
+    display: flex;
+    width: 500px;
+    flex-direction: column;
+}
+
+.button_icone{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+
+}
+
+.mostrar_botao{
+    display: flex;
+    flex-direction: row;
+    margin-left: 460px;
+    position: absolute;
+    margin-top: 35px;
+}
+
+i{
+    display: flex;
+    flex-direction: row;
+
+}
+
+
 .sobre-cor {
     color: #f6a001;
 }
@@ -63,11 +97,13 @@ a {
 a:hover {
     color: #f6a001;
     transition: all 0.3s;
-
-
 }
 
-
+.senharevelar{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
 
 
 .title {
@@ -75,6 +111,7 @@ a:hover {
     line-height: 10px;
     color: white;
     font-family: 'Mantinia Regular';
+    text-decoration: none
 }
 
 
@@ -101,6 +138,11 @@ h3 {
     font-size: 40px;
     margin: 0;
     padding-top: 50px;
+}
+
+.eldenlorde{
+    font-size: 30px;
+    line-height: 10px;
 }
 
 .elden_span {
@@ -164,7 +206,7 @@ img {
     border-radius: 50px;
 }
 
-form {
+.form {
     display: flex;
     width: 500px;
     flex-direction: column;
@@ -209,7 +251,7 @@ input {
 }
 
 .link-cadastro {
-    width: 200px;
+    width: 165px;
     margin-left: 140px;
     padding: 15px;
     background-color: rgb(255, 255, 255);
@@ -219,8 +261,10 @@ input {
     font-size: 20px;
     color: black;
     border-radius: 20px;
-    margin-top: 100px;
+    margin-top:5px;
     text-decoration: none;
+    display: flex;
+    justify-content: center;
 }
 
 .link-cadastro:hover {
@@ -231,7 +275,7 @@ input {
 
 footer {
     background-color: black;
-    width: 95vw;
+    width: 85vw;
     display: flex;
     justify-content: center;
 }

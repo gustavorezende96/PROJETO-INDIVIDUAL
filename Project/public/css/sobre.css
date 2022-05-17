@@ -20,40 +20,6 @@ header {
     align-items: center;
 }
 
-.nome_input, .email_input{
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-}
-
-.senha_input{
-    display: flex;
-    width: 500px;
-    flex-direction: column;
-}
-
-.button_icone{
-    background-color: transparent;
-    border: 0;
-    cursor: pointer;
-
-}
-
-.mostrar_botao{
-    display: flex;
-    flex-direction: row;
-    margin-left: 460px;
-    position: absolute;
-    margin-top: 35px;
-}
-
-i{
-    display: flex;
-    flex-direction: row;
-
-}
-
-
 .sobre-cor {
     color: #f6a001;
 }
@@ -76,7 +42,7 @@ li {
 }
 
 .linkEntrar {
-    color: #f6a001;
+    color: #ffffff;
     font-weight: 600;
 }
 
@@ -97,13 +63,10 @@ a {
 a:hover {
     color: #f6a001;
     transition: all 0.3s;
+
+
 }
 
-.senharevelar{
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-}
 
 
 .title {
@@ -111,9 +74,7 @@ a:hover {
     line-height: 10px;
     color: white;
     font-family: 'Mantinia Regular';
-    text-decoration: none
 }
-
 
 .title:hover {
     color: #f6a001;
@@ -140,11 +101,6 @@ h3 {
     padding-top: 50px;
 }
 
-.eldenlorde{
-    font-size: 30px;
-    line-height: 10px;
-}
-
 .elden_span {
     color: #f6a001;
 }
@@ -159,13 +115,19 @@ h3 {
     width: 30%;
     font-size: 23px;
     margin: 0 0 20px 0;
-    color: white;
-    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    border-radius: 20px;
     justify-content: center;
     display: flex;
-    background-color: #f6a001;
+    background-color: #ffffff;
     font-weight: 500;
     border: none;
+}
+
+.lientrar:hover {
+    cursor: pointer;
+    background-color: #f6a001;
+    transition: all 0.2s;
 }
 
 .span_texto_entrar {
@@ -187,9 +149,7 @@ h4 {
 }
 
 h5 {
-    justify-content: center;
-    display: flex;
-    margin: 40px 15px 0 0;
+    margin: 0;
     font-size: 30px;
 }
 
@@ -199,14 +159,14 @@ article {
 }
 
 img {
-    height: 650px;
+    height: 700px;
     width: 600px;
     margin-bottom: 200px;
     margin-left: 50px;
     border-radius: 50px;
 }
 
-.form {
+form {
     display: flex;
     width: 500px;
     flex-direction: column;
@@ -220,54 +180,18 @@ input {
     border-radius: 20px;
 }
 
-.botao_entrar {
+.subm {
     width: 200px;
     margin-left: 140px;
     padding: 15px;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     font-family: 'Poppins';
     height: 50%;
     font-weight: 500;
-    font-size: 20px;
-    color: black;
-    border-radius: 20px;
-    margin-top: 50px;
-    cursor: pointer;
 
 }
 
-.botao_entrar:hover {
-    cursor: pointer;
-    background-color: #f6a001;
-    transition: all 0.2s;
-}
-
-.link_entrar {
-    margin-top: 30px;
-}
-
-.link-cadastro {
-    margin-top: 0;
-}
-
-.link-cadastro {
-    width: 165px;
-    margin-left: 140px;
-    padding: 15px;
-    background-color: rgb(255, 255, 255);
-    font-family: 'Poppins';
-    height: 50%;
-    font-weight: 500;
-    font-size: 20px;
-    color: black;
-    border-radius: 20px;
-    margin-top:5px;
-    text-decoration: none;
-    display: flex;
-    justify-content: center;
-}
-
-.link-cadastro:hover {
+.subm:hover {
     cursor: pointer;
     background-color: #f6a001;
     transition: all 0.2s;
@@ -275,7 +199,7 @@ input {
 
 footer {
     background-color: black;
-    width: 95vw;
+    width: 85vw;
     display: flex;
     justify-content: center;
 }
