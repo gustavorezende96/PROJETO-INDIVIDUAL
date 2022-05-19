@@ -188,11 +188,14 @@ h4 {
 
 h5 {
     justify-content: center;
-    display: flex;
-    margin: 40px 15px 0 0;
+    margin-top: 40px;
+    padding-left: 60px;
+    /* margin: 40px 0px 0 50px; */
     font-size: 30px;
 }
-
+.temConta{
+    margin-left: 30px;
+}
 article {
     margin-left: 30px;
 
@@ -248,6 +251,7 @@ input {
 
 .link-cadastro {
     margin-top: 0;
+    margin-bottom: 100px;
 }
 
 .link-cadastro {
@@ -271,6 +275,7 @@ input {
     cursor: pointer;
     background-color: #f6a001;
     transition: all 0.2s;
+    color: black;
 }
 
 footer {

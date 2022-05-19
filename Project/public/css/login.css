@@ -227,6 +227,8 @@ input {
     cursor: pointer;
     background-color: #f6a001;
     transition: all 0.2s;
+    color: black;
+    
 }
 
 footer {

@@ -1,50 +1,173 @@
 body {
+    margin: 0;
+    padding: 0;
     background-color: #012120;
-    color: white;
-    padding: 15px;
     font-family: 'Poppins';
-    max-width: 1300px;
-    margin: 0 auto 0 auto;
-    width: 100%;
-    height: 100%;
 }
 
-.sidebar{
-    width: 25%;
-    height: 100%;
-    border-right: 2px #f6a001 solid;
-}
-
-.boas-vindas{
+a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-right: 40px
+    flex-direction: row;
+}
+
+a:hover{
+    opacity: 0.7;
+    color: #f6a001;
 }
 
 h1{
+    font-size: 24px;
+    letter-spacing: 0.2px;
+    color: white;
+    line-height: 23px;
     font-family: 'Mantinia Regular';
-    padding-top: 50px;
 }
-
 h1:hover{
-    color: #f6a001;
     transition: all 0.3s;
-}
-
-h2{
-    margin-top: 30px;
-}
-
-h2:hover{
     color: #f6a001;
-    transition: all 0.3s;
+    
 }
 
-li{
-    decoration: none;
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    backdrop-filter: blur(100px);
+    border-bottom: #f6a001 solid 1px;
+    text-transform: uppercase;
+    opacity: calc(80%);
+}
+
+.navbar:hover{
+    opacity: calc(100%);
+}
+
+ul{
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
+}
 
+ul li{
+    margin: 10px;
+    letter-spacing: 1px;
+     margin-left: 32px;
+}
+
+.sair{
+    margin-left: 30px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.form{
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size:30px;
+}
+
+.eldenlorde{
+    color: rgb(255, 255, 255);
+}
+
+h3{
+    color: white;
+    font-size:30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bemvindo:hover{
+    transition: all 0.3s;
+    color: #f6a001;
+}
+
+
+input{
+    width: 400px;
+    padding: 15px;
+    background-color: rgb(255, 255, 255);
+    font-family: 'Poppins';
+    height: 50%;
+    font-weight: 500;
+    font-size: 20px;
+    color: black;
+    border-radius: 20px;
+    margin-top:5px;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin-bottom: 30px;
+}
+
+h5{
+    font-size: 20px;
+    color: #f6a001;
+}
+
+
+
+aside{
+    background-color: #0f3a38;
+    opacity: calc(80%);
+    border-radius: 20px;
+    padding: 10px 10px 10px 10px;
+    display: grid;
+    place-items: center;
+    box-shadow: 6px 6px #215250;
+
+}
+
+aside:hover{
+    opacity: calc(100%);
+}
+
+.mostrar_botao{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    opacity: calc(60%);
+}
+
+.mostrar_botao:hover{
+    opacity: calc(85%);
+}
+
+.button_icone{
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    margin-left: 350px;
+    margin-top: 12px;
+
+}
+
+.seta{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    width: 70px;
+}
+
+.nivel_input{
+    display: flex;
+    flex-direction: row;
 }

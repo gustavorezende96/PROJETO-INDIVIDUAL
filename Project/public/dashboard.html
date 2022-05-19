@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,26 +8,49 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Golden Order</title>
     <link rel="stylesheet" href="css/dashboard.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-
-    <div class="sidebar">
-        
-        
-        <div class="boas-vindas">
-            <h1>
-                GOLDEN ORDER
+    <header>
+        <div class="navbar">
+            <h1 class="title_1">GOLDEN
+                <br>
+                ORDER
             </h1>
-            <h2>Seja bem-vindo, <span id="span_nome_boas_vindas">USER!</span></h2>
 
-        <div class="links">
             <ul class="lista">
-                <a href="#"><li>Calcular</li></a>
-                <a href="#"><li>Gráficos</li></a>
-                <a href="#"><li>Log Out</li></a>
+                <li><a href="dashboard.html">Calcular</a></li>
+                <li><a href="graficos.html">Gráficos</a></li>
+                <li> <a href="index.html">Sair</a></li>
             </ul>
         </div>
-        </div>
+    </header>
 
-    </div>
+<main>
+    <main class="main">
+        <aside>
+            <h3>
+              <span class="bemvindo">Seja bem-vindo <span id="usuarioNome">Maculado(a)!!</span></span>
+                <span class="bemvindo">Você está perto de se juntar a Ordem Dourada!</span>
+            </h3>
+            <h5>Antes de tudo, informe em qual nível o seu personagem se encontra.</h5>
+            <div class="form">
+                <div class="nivel_input">
+                <input id="nivel" type="number" placeholder="Nível atual do personagem">
+                <span class="mostrar_botao"><button class="button_icone" id="button_icon" onclick="calcular()"><img src="https://i.pinimg.com/originals/72/87/23/7287230162c5b64f09a34ee19d7da119.png" class="seta"/></button></span>
+            </div>
+            <!-- <div class="email_input">
+                <input id="email" type="email" placeholder="Insira seu melhor e-mail!">
+            </div>
+            <div class="senha_input">
+                <input id="senha" type="password" placeholder="Insira uma senha forte como você!">
+            </div> -->
+            
+            </div>
+        </aside>
+</main>
+</body>
+</html>
