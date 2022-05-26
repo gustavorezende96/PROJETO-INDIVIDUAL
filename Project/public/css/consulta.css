@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #012120;
+    font-family: 'Poppins';
+}
+
+a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+}
+
+a:hover{
+    opacity: 0.7;
+    color: #f6a001;
+}
+
+h1{
+    font-size: 24px;
+    letter-spacing: 0.2px;
+    color: white;
+    line-height: 23px;
+    font-family: 'Mantinia Regular';
+}
+h1:hover{
+    transition: all 0.3s;
+    color: #f6a001;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    backdrop-filter: blur(100px);
+    border-bottom: #f6a001 solid 1px;
+    text-transform: uppercase;
+    opacity: calc(80%);
+}
+
+.navbar:hover{
+    opacity: calc(100%);
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+ul li{
+    margin: 10px;
+    letter-spacing: 1px;
+     margin-left: 32px;
+}
+
+.sair{
+    margin-left: 30px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+}

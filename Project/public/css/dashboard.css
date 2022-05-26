@@ -5,7 +5,7 @@ body {
     font-family: 'Poppins';
 }
 
-a{
+ul a{
     color: white;
     text-decoration: none;
     transition: 0.3s;
@@ -13,7 +13,7 @@ a{
     flex-direction: row;
 }
 
-a:hover{
+ul a:hover{
     opacity: 0.7;
     color: #f6a001;
 }
@@ -145,6 +145,8 @@ aside:hover{
     flex-direction: row;
     position: absolute;
     opacity: calc(60%);
+    height: 40px;
+    width: 70px;
 }
 
 .mostrar_botao:hover{
@@ -155,7 +157,7 @@ aside:hover{
     background-color: transparent;
     border: 0;
     cursor: pointer;
-    margin-left: 350px;
+    margin-left: 360px;
     margin-top: 12px;
 
 }
@@ -170,4 +172,31 @@ aside:hover{
 .nivel_input{
     display: flex;
     flex-direction: row;
+}
+
+#aside2 li{
+    list-style: none;
+    font-family: 'Mantinia Regular';
+    margin-top: 50px;
+    
+}
+
+#aside2 a{
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: row;
+}
+
+#aside2 a:hover{
+    color: #f6a001;
+    transition: all 0.3s;
+}
+
+caption{
+    font-size:x-large;
+    font-family: 'Mantinia Regular';
+    margin-bottom: 30px;
+    padding-top: 20px;
 }

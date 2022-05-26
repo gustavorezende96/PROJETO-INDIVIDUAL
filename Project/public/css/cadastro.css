@@ -75,6 +75,25 @@ li {
 
 }
 
+select{
+    height: 40px;
+    border-radius: 20px;
+    border: 1px solid #000;
+    background-color: rgb(255, 255, 255);
+    color: #4A5568;
+    font-family: 'Poppins';
+    font-weight: 400;
+    font-size: 14px;
+    padding-left: 10px;
+    outline: none;
+    margin-top: 20px;
+}
+
+option:first {
+    color: #999;
+}
+
+
 .linkEntrar {
     color: #f6a001;
     font-weight: 600;
@@ -207,6 +226,12 @@ img {
     margin-bottom: 200px;
     margin-left: 50px;
     border-radius: 50px;
+    transition: all 0.6s  cubic-bezier(0.125, 0.54, 0.24, 1);
+}
+
+img:hover{
+    transform: scale(1.10,1.10);
+    transition: all 0.3s;
 }
 
 .form {
@@ -221,6 +246,7 @@ input {
     padding: 15px;
     border: none;
     border-radius: 20px;
+    font-family: 'poppins';
 }
 
 .botao_entrar {

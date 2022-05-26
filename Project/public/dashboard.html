@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="components/images/favicon.ico" type="image/x-icon">
     <title>Golden Order</title>
     <link rel="stylesheet" href="css/dashboard.css">
+    <script src="js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 </head>
 
-<body>
+<body onload="nomeUsuario()">
     <header>
         <div class="navbar">
             <h1 class="title_1">GOLDEN
@@ -29,28 +31,62 @@
         </div>
     </header>
 
-<main>
-    <main class="main">
-        <aside>
-            <h3>
-              <span class="bemvindo">Seja bem-vindo <span id="usuarioNome">Maculado(a)!!</span></span>
-                <span class="bemvindo">Você está perto de se juntar a Ordem Dourada!</span>
-            </h3>
-            <h5>Antes de tudo, informe em qual nível o seu personagem se encontra.</h5>
-            <div class="form">
-                <div class="nivel_input">
-                <input id="nivel" type="number" placeholder="Nível atual do personagem">
-                <span class="mostrar_botao"><button class="button_icone" id="button_icon" onclick="calcular()"><img src="https://i.pinimg.com/originals/72/87/23/7287230162c5b64f09a34ee19d7da119.png" class="seta"/></button></span>
-            </div>
-            <!-- <div class="email_input">
-                <input id="email" type="email" placeholder="Insira seu melhor e-mail!">
-            </div>
-            <div class="senha_input">
-                <input id="senha" type="password" placeholder="Insira uma senha forte como você!">
-            </div> -->
-            
-            </div>
-        </aside>
-</main>
+    <main>
+        <main class="main">
+            <aside id="aside">
+                <h3>
+                    <span class="bemvindo">Seja bem-vindo <span id="usuarioNome">Maculado(a)!!</span></span>
+                    <span class="bemvindo">Você está perto de se juntar a Ordem Dourada!</span>
+                </h3>
+                <h5>Antes de tudo, informe em qual nível o seu personagem se encontra.</h5>
+                <div class="form">
+                    <div class="nivel_input">
+                        <input id="input_nivel" type="number" placeholder="Nível atual do personagem">
+                        <span class="mostrar_botao"><button onclick="botao_calcular()" class="button_icone"
+                                id="button_icon"><img
+                                    src="https://i.pinimg.com/originals/72/87/23/7287230162c5b64f09a34ee19d7da119.png"
+                                    class="seta" /></button></span>
+                    </div>
+                </div>
+            </aside>
+            <aside id="aside2" style="display: none;">
+                <table style="width: 300px; color: white;" border="1">
+                    <caption>
+                        COOPERATIVO
+                    </caption>
+                    <th>-</th>
+                    <th>Nivel mínimo</th>
+                    <th>Nível Máximo</th>
+                    <tr>
+                        <td>
+                            Ajudar:
+                        </td>
+                        <td id="min_ajudartd">
+
+                        </td>
+                        <td id="max_ajudartd">
+                            
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Ser ajudado:
+                        </td>
+                        <td id="min_ajudadotd">
+                            
+                        </td>
+                        <td id="max_ajudadotd">
+                            
+                        </td>
+                    </tr>
+
+                </table>
+                <li><a href="dashboard.html">REFAZER CÁLCULO</a></li>
+            </aside>
+
+
+        </main>
 </body>
+
 </html>

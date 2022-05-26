@@ -162,9 +162,15 @@ img {
     margin-bottom: 200px;
     margin-left: 50px;
     border-radius: 50px;
+    transition: all 0.6s  cubic-bezier(0.125, 0.54, 0.24, 1);
 }
 
-form {
+img:hover{
+    transform: scale(1.10,1.10);
+    transition: all 0.3s;
+}
+
+.form {
     display: flex;
     width: 500px;
     flex-direction: column;
