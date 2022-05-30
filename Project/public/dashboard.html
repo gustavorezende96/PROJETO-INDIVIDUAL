@@ -50,39 +50,74 @@
                 </div>
             </aside>
             <aside id="aside2" style="display: none;">
-                <table style="width: 300px; color: white;" border="1">
+                <table style="width: 300px; color: white;" border="1" id="tablecoop">
                     <caption>
                         COOPERATIVO
                     </caption>
                     <th>-</th>
                     <th>Nivel mínimo</th>
-                    <th>Nível Máximo</th>
+                    <th id="nivelmaxTexto">Nível Máximo</th>
                     <tr>
-                        <td>
-                            Ajudar:
+                        <td id="texto1">
+                            Você pode ser ajudado por players nos níveis:
                         </td>
                         <td id="min_ajudartd">
-
+                            0
                         </td>
                         <td id="max_ajudartd">
-                            
+                            0
                         </td>
                     </tr>
 
                     <tr>
-                        <td>
-                            Ser ajudado:
+                        <td id="texto2">
+                            Você pode ajudar players nos níveis:
                         </td>
                         <td id="min_ajudadotd">
-                            
+                            0
                         </td>
                         <td id="max_ajudadotd">
-                            
+                            0
                         </td>
                     </tr>
+                    <table style="display: none; width: 300px; color: white;" border="1" id="tablepvp">
+                        <caption>
+                            PVP
+                        </caption>
+                        <th>-</th>
+                        <th>Nivel mínimo</th>
+                        <th id="nivelmaxTexto">Nível Máximo</th>
+                        <tr>
+                            <td id="texto1">
+                                Você pode ser invadido por players nos níveis:
+                            </td>
+                            <td id="min_ajudartdPVP">
+                                0
+                            </td>
+                            <td id="max_ajudartdPVP">
+                                0
+                            </td>
+                        </tr>
+    
+                        <tr>
+                            <td id="texto2">
+                                Você pode invadir players nos níveis:
+                            </td>
+                            <td id="min_ajudadotdPVP">
+                                0
+                            </td>
+                            <td id="max_ajudadotdPVP">
+                                0
+                            </td>
+                        </tr>
 
                 </table>
-                <li><a href="dashboard.html">REFAZER CÁLCULO</a></li>
+                <div id="botoes">
+                <li><a href="dashboard.html">REFAZER CÁLCULO</a>
+                </li>
+                <button onclick="botao_pvp()" class="button_icone" id="buttonPVP">PVP</button>
+                <button onclick="botao_coop()" class="button_icone" id="buttonCOOP" style="display: none;">COOP</button>
+            </div>
             </aside>
 
 

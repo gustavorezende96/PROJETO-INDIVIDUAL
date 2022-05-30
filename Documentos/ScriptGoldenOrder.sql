@@ -5,6 +5,7 @@ use golden_order;
 create table usuario(
 idUsuario int primary key auto_increment,
 nome varchar (255),
+plataforma varchar (255),
 email varchar (50),
 senha varchar (80)
 );

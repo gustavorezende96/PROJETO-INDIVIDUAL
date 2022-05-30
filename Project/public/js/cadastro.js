@@ -24,7 +24,7 @@
             title: 'Insira as informações',
             text: 'Por favor, preencha os campos!',
         })
-    } else if(emailVar.indexOf('@') == -1 || emailVar.indexOf('.') == -1){
+    } else if(emailVar.indexOf('@') == - 1 || emailVar.indexOf('.') == - 1){
         Swal.fire({
             icon: 'error',
             title: 'Insira um email válido!',

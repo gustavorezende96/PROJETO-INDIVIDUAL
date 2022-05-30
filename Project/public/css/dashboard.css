@@ -178,7 +178,21 @@ aside:hover{
     list-style: none;
     font-family: 'Mantinia Regular';
     margin-top: 50px;
-    
+    color: white;
+}
+#aside2 button{
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+main{
+width: 100%;    
+height: 100%;
+}
+
+#aside2{
+width: 40%;
+height: 50%;
 }
 
 #aside2 a{
@@ -199,4 +213,48 @@ caption{
     font-family: 'Mantinia Regular';
     margin-bottom: 30px;
     padding-top: 20px;
+}
+
+table{
+    border: #ffffff 1px solid;
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+td{
+    border: #ffffff 1px solid;
+    padding: 15px;
+    border-spacing: 10px;
+    text-align: center;
+}
+
+#texto1{
+    width: 400px;
+}
+
+#texto2{
+    width: 400px;
+}
+
+#botoes{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    font-family: 'Mantinia Regular';
+}
+
+#botoes li{
+    margin-right: 20px; 
+}
+
+#botoes button{
+    margin: 50px 0px 20px 10px;
+    padding: 0;
+    font-family: 'Mantinia Regular';
+    font-size: medium;
+}
+
+#botoes button:hover{
+    color: #f6a001;
+    transition: all 0.3s;
 }

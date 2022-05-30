@@ -9,9 +9,9 @@ var lista_niveis = []
 function botao_calcular(){
     var nivel = 0
     var etapa = 1
-    var nivel_usuario = Number(input_nivel.value);
-    lista_niveis.push(nivel_usuario)
-    if(nivel_usuario == 0){
+    var rl = Number(input_nivel.value);
+    lista_niveis.push(rl)
+    if(rl == 0){
         Swal.fire({
         icon: 'info',
         title: 'Informe seu nível!',
@@ -19,7 +19,7 @@ function botao_calcular(){
     })
     }
 
-    else if (nivel_usuario > 713){
+    else if (rl > 713){
         Swal.fire({
             icon: 'info',
             title: 'Informe seu nível!',
@@ -36,10 +36,10 @@ function botao_calcular(){
     }
     
 
-    var min_ajudar = (nivel_usuario - 10) - (nivel_usuario * 0.1)
-    var max_ajudar = (nivel_usuario + 10) + (nivel_usuario * 0.1)
-    var min_serAjudado = (nivel_usuario - 10) - (nivel_usuario * 0.1) + 1
-    var max_serAjudado = (nivel_usuario + 10) + (nivel_usuario * 0.1) + 1
+    var min_serAjudado = (rl - 10) - (rl * 0.1)  + 1
+    var max_serAjudado = (rl + 10) + (rl * 0.1)
+    var min_ajudar = (rl - 10) - (rl * 0.2) 
+    var max_ajudar = (rl + 10) + (rl * 0.2)
 
     min_ajudartd.innerHTML = `${min_ajudar.toFixed(0)}`
     max_ajudartd.innerHTML = `${max_ajudar.toFixed(0)}`
@@ -47,9 +47,34 @@ function botao_calcular(){
     max_ajudadotd.innerHTML = `${max_serAjudado.toFixed(0)}`
 }
 
+function botao_pvp(){
+    if(tablepvp.style.display == "none"){
+        tablepvp.style.display = ""
+        tablecoop.style.display = "none"
+        buttonCOOP.style.display = ""
+        buttonPVP.style.display = "none"
+
+        var rl = Number(input_nivel.value);
 
 
-// for(var contador = 1; contador <= etapa; etapa++){
-//     aside.style.display = "none";
-//     etapa++
-// }
+
+        var min_serAjudado = rl - (rl * 0.1) + 1
+        var max_serAjudado = rl  + (rl * 0.1) + 7
+        var min_ajudar = rl - (rl * 0.2) + 3
+        var max_ajudar = rl + (rl * 0.2) + 2
+
+        min_ajudartdPVP.innerHTML = `${min_ajudar.toFixed(0)}`
+        max_ajudartdPVP.innerHTML = `${max_ajudar.toFixed(0)}`
+        min_ajudadotdPVP.innerHTML = `${min_serAjudado.toFixed(0)}`
+        max_ajudadotdPVP.innerHTML = `${max_serAjudado.toFixed(0)}`
+    }
+}
+
+function botao_coop(){
+    if(tablecoop.style.display == "none"){
+        tablecoop.style.display = ""
+        tablepvp.style.display = "none"
+        buttonPVP.style.display = ""
+        buttonCOOP.style.display = "none"
+    }
+}

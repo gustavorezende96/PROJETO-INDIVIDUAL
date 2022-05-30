@@ -1,13 +1,15 @@
 function mais(){
-    var numero = 1
 
 
     if(ps.style.display == 'none'){
-    for(var contador = 0; contador <= numero; contador++){
-        ps.style.display = ""
-    }
+        ps.style.display = "";
+        divbotao_mais.style.display = "none"  
 }
-    else{
-        ps.style.display = "none"
+}
+
+function menos(){
+    if(ps.style.display == ""){
+        ps.style.display = "none";
+        divbotao_mais.style.display = ""  
     }
 }
