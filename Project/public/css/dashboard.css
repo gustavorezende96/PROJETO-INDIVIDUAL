@@ -258,3 +258,7 @@ td{
     color: #f6a001;
     transition: all 0.3s;
 }
+
+th{
+    width: 200px;
+}

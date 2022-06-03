@@ -7,13 +7,13 @@
         
         var input_plataforma = plataforma.value
         if (input_plataforma == "ps"){
-            plataformaVar = "Playstation"
+            plataformaVar = "1"
         }
         else if (input_plataforma == "xbox"){
-            plataformaVar = "Xbox"
+            plataformaVar = "2"
         }
         else if (input_plataforma == "pc"){
-            plataformaVar = "PC"
+            plataformaVar = "3"
         }
 
         lista_plataformas.push(plataformaVar)
