@@ -27,7 +27,6 @@ function botao_calcular(){
     var nivel = 0
     var etapa = 1
     var runeLevel = Number(input_nivel.value);
-    lista_niveis.push(runeLevel)
     if(runeLevel == 0){
         Swal.fire({
         icon: 'info',
@@ -79,7 +78,7 @@ function botao_pvp(){
         var max_serAjudado = runeLevel  + (runeLevel * 0.1) + 7
         var min_ajudar = runeLevel - (runeLevel * 0.2) + 3
         var max_ajudar = runeLevel + (runeLevel * 0.2) + 2
-
+        
         min_ajudartdPVP.innerHTML = `${min_ajudar.toFixed(0)}`
         max_ajudartdPVP.innerHTML = `${max_ajudar.toFixed(0)}`
         min_ajudadotdPVP.innerHTML = `${min_serAjudado.toFixed(0)}`

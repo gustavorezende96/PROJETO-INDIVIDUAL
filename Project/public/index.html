@@ -68,10 +68,12 @@
 <script>
     var listaIMG = []
 function slide(){
-    listaIMG = ['components/images/eldenring1.gif', 'components/images/eldenring2.webp', 'components/images/eldenring3.webp', 'https://eldenring.wiki.fextralife.com/file/Elden-Ring/elden-ring-wiki-guide-walkthrough-background-min.jpg']
+    listaIMG = {
+         imagens: ['components/images/eldenring1.gif', 'components/images/eldenring2.webp', 'components/images/eldenring3.webp', 'https://eldenring.wiki.fextralife.com/file/Elden-Ring/elden-ring-wiki-guide-walkthrough-background-min.jpg']
+        }
 
     var randomizador = Math.floor(Math.random(1) * (4))
-    imgs.src = listaIMG[randomizador];
+    imgs.src = listaIMG.imagens[randomizador];
 }
 
 setInterval(
