@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="components/images/favicon.ico" type="image/x-icon">
     <title>Golden Order</title>
+    <script src="js/comofunciona.js"></script>
+    <script src="js/dashboard.js"></script>
     <link rel="stylesheet" href="css/comofunciona.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"rel="stylesheet">
 </head>
-<body>
+<body onload="validarSessao()">
 
     <header>
         <div class="navbar">
@@ -21,7 +23,7 @@
             <ul class="lista">
                 <li><a href="dashboard.html">Calcular</a></li>
                 <li><a href="comofunciona.html">Como funciona?</a></li>
-                <li><a href="graficos.html">Gráficos</a></li>
+                <li><a href="grafico.html">Gráficos</a></li>
                 <li> <a href="index.html">Sair</a></li>
             </ul>
         </div>
@@ -29,6 +31,7 @@
 
     <main class="main">
         <aside>
+            <div id="etapa0" >
             <h3>
                 "O que é Cooperativo?"
             </h3>
@@ -43,26 +46,51 @@
             <p>"PVP" <span class="elden_span"> é a sigla para "Player vs Player"</span>, ou seja, é o <span class="elden_span">modo em que os jogadores podem batalhar entre sí.</span> Jogadores podem invadir o seu jogo para te atacarem em busca de recompensas,
                 e vice-versa. O jogador invasor fica com uma espécie de aura vermelha em volta do corpo, assim são fáceis de serem identifcados (apesar de possuir maneiras de se "camuflar" e se passar como um jogador amigável).
             </p>
-            
             <div class="form">
                 <button onclick="proximaPagina()">Próxima Página</button>
             </div>
+        </div>
+        <div id="etapa1" style="display: none">
+            <h3 id="comoinvocar">
+                "Como "invocar" cooperadores?"
+            </h3>
+
+            <p>Para ser apto a receber ou forneces ajuda a outros jogadores <span class="elden_span"> é necessario cumprir uma série de requisitos.</span> É necessario (além de conexão com a internet), alguns itens obtidos dentro do jogo.
+                Alguns deles são: "Remédio de Dedo Invocador Enrolado" e a "Efígie Dourada Pequena". Para saber maís, <a href="https://tecnoblog.net/responde/como-jogar-o-multiplayer-de-elden-ring/">clique aqui!</a>
+            </p>
+            <br>
+            <h3 id="naoacho">
+                "Não acho jogadores online!"
+            </h3>
+            <p>Como dito anteriormente, o nível do seu personagem impacta diretamente nessa questão. Pórem dependendo da plataforma, podem existir mais ou menos jogadores e pensando nessa questão, montamos um gráfico que exibi em qual plataforma os jogadores cadastrados na <span class="elden_span">Golden Order</span> estão. 
+            </p>
+           
+            <div class="form" id="botaoPaginaAnterior">
+                <button onclick="paginaAnterior()">Página Anterior</button>
+            </div>
+            <div class="form" id="botaoMandarParaGrafico">
+                <button onclick="mandaParaGrafrico()">Gráfico</button>
+            </div>
+        </div>
+            
 
         </aside>
 
         <article id="article">
-            <img src="components/images/maleniaGIF.gif">
-            <!-- https://i.redd.it/cesemu5rlyo81.jpg -->
+            <img src="components/images/maleniaGIF.gif" id="imgs">
+            
         </article>
+
 
     </main>
 
-    <footer class="footer">
-        <div class="container">
-            <div>
-                <span>© 2022 - Todos os direitos reservados a FromSoftware, Inc. e a Bandai Namco Entertainment Inc.</span>
-            </div>
-        </div>
-    </footer>
+    
 </body>
+<footer class="footer">
+    <div class="container">
+        <div>
+            <span>© 2022 - Todos os direitos reservados a FromSoftware, Inc. e a Bandai Namco Entertainment Inc.</span>
+        </div>
+    </div>
+</footer>
 </html>

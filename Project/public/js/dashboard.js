@@ -1,3 +1,20 @@
+function validarSessao() {
+    idUsuario = sessionStorage.ID_USUARIO
+    nome = sessionStorage.NOME_USUARIO
+    email = sessionStorage.EMAIL_USUARIO
+  
+    if (idUsuario == null && nome == null && email == null ) {
+      window.location = "login.html";
+    }
+  }
+
+function limparSessao(){
+        sessionStorage.clear();
+        window.location = "login.html";
+}
+
+
+
 function nomeUsuario(){
     var nome = sessionStorage.NOME_USUARIO;
     usuarioNome.innerHTML = `${nome}!!`
@@ -9,9 +26,9 @@ var lista_niveis = []
 function botao_calcular(){
     var nivel = 0
     var etapa = 1
-    var rl = Number(input_nivel.value);
-    lista_niveis.push(rl)
-    if(rl == 0){
+    var runeLevel = Number(input_nivel.value);
+    lista_niveis.push(runeLevel)
+    if(runeLevel == 0){
         Swal.fire({
         icon: 'info',
         title: 'Informe seu nível!',
@@ -19,7 +36,7 @@ function botao_calcular(){
     })
     }
 
-    else if (rl > 713){
+    else if (runeLevel > 713){
         Swal.fire({
             icon: 'info',
             title: 'Informe seu nível!',
@@ -36,10 +53,10 @@ function botao_calcular(){
     }
     
 
-    var min_serAjudado = (rl - 10) - (rl * 0.1)  + 1
-    var max_serAjudado = (rl + 10) + (rl * 0.1)
-    var min_ajudar = (rl - 10) - (rl * 0.2) 
-    var max_ajudar = (rl + 10) + (rl * 0.2)
+    var min_serAjudado = (runeLevel - 10) - (runeLevel * 0.1)  + 1
+    var max_serAjudado = (runeLevel + 10) + (runeLevel * 0.1)
+    var min_ajudar = (runeLevel - 10) - (runeLevel * 0.3) 
+    var max_ajudar = (runeLevel + 10) + (runeLevel * 0.3)
 
     min_ajudartd.innerHTML = `${min_ajudar.toFixed(0)}`
     max_ajudartd.innerHTML = `${max_ajudar.toFixed(0)}`
@@ -54,14 +71,14 @@ function botao_pvp(){
         buttonCOOP.style.display = ""
         buttonPVP.style.display = "none"
 
-        var rl = Number(input_nivel.value);
+        var runeLevel = Number(input_nivel.value);
 
 
 
-        var min_serAjudado = rl - (rl * 0.1) + 1
-        var max_serAjudado = rl  + (rl * 0.1) + 7
-        var min_ajudar = rl - (rl * 0.2) + 3
-        var max_ajudar = rl + (rl * 0.2) + 2
+        var min_serAjudado = runeLevel - (runeLevel * 0.1) + 1
+        var max_serAjudado = runeLevel  + (runeLevel * 0.1) + 7
+        var min_ajudar = runeLevel - (runeLevel * 0.2) + 3
+        var max_ajudar = runeLevel + (runeLevel * 0.2) + 2
 
         min_ajudartdPVP.innerHTML = `${min_ajudar.toFixed(0)}`
         max_ajudartdPVP.innerHTML = `${max_ajudar.toFixed(0)}`

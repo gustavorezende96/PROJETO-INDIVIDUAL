@@ -1,6 +1,6 @@
 var database = require("../database/config");
 
-function buscarUltimasMedidas(idAquario, limite_linhas) {
+function buscarUltimasMedidas(idPlataforma, limite_linhas) {
 
     instrucaoSql = ''
 
@@ -11,17 +11,13 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
                         momento,
                         CONVERT(varchar, momento, 108) as momento_grafico
                     from medida
-                    where fk_aquario = ${idAquario}
+                    where fk_plataforma = ${idPlataforma}
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
-                        momento,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from medida
-                    where fk_aquario = ${idAquario}
-                    order by id desc limit ${limite_linhas}`;
+        instrucaoSql = `
+        select 
+        plataforma.plataforma as NomePlataforma, count(usuario.nome) as QuantidadeUsuarios from usuario
+        join plataforma on usuario.fk_plataforma = plataforma.idPlataforma group by plataforma.plataforma;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -45,13 +41,10 @@ function buscarMedidasEmTempoReal(idAquario) {
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-        dht11_temperatura as temperatura, 
-        dht11_umidade as umidade,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fk_aquario 
-                        from medida where fk_aquario = ${idAquario} 
-                    order by id desc limit 1`;
+        instrucaoSql = `
+        select 
+        plataforma.plataforma as NomePlataforma, count(usuario.nome) as QuantidadeUsuarios from usuario
+        join plataforma on usuario.fk_plataforma = plataforma.idPlataforma group by plataforma.plataforma;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

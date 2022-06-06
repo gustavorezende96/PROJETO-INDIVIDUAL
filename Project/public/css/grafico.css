@@ -120,7 +120,6 @@ input{
     align-items: center;
     height: 20px;
     margin-bottom: 30px;
-    outline: none;
 }
 
 h5{
@@ -128,7 +127,12 @@ h5{
     color: #f6a001;
 }
 
-
+canvas{
+    height: 200px;
+    width: 480px;
+    border-radius: 20px;
+    background-color: #082e2a;
+}
 
 aside{
     background-color: #0f3a38;
@@ -138,6 +142,7 @@ aside{
     display: grid;
     place-items: center;
     box-shadow: 6px 6px #215250;
+    height: 380px;
 
 }
 
@@ -224,7 +229,6 @@ table{
     border: #ffffff 1px solid;
     border-collapse: collapse;
     table-layout: auto;
-    border-radius: 20px;
 }
 
 td{
@@ -232,7 +236,6 @@ td{
     padding: 15px;
     border-spacing: 10px;
     text-align: center;
-    border-radius: 20px;
 }
 
 #texto1{

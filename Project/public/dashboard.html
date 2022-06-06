@@ -15,8 +15,9 @@
         rel="stylesheet">
 </head>
 
-<body onload="nomeUsuario()">
-    <header>
+<body onload="nomeUsuario(), validarSessao()">
+    
+<header>
         <div class="navbar">
             <h1 class="title_1">GOLDEN
                 <br>
@@ -26,8 +27,8 @@
             <ul class="lista">
                 <li><a href="dashboard.html">Calcular</a></li>
                 <li><a href="comofunciona.html">Como funciona?</a></li>
-                <li><a href="graficos.html">Gráficos</a></li>
-                <li> <a href="index.html">Sair</a></li>
+                <li><a href="grafico.html">Gráficos</a></li>
+                <li> <a onclick="limparSessao()">Sair</a></li>
             </ul>
         </div>
     </header>

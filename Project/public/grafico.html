@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="components/images/favicon.ico" type="image/x-icon">
+    <title>Golden Order</title>
+    <link rel="stylesheet" href="css/grafico.css">
+    <script src="js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.4.8/dist/sweetalert2.all.min.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+        <script type="text/javascript" src="https://www.chartjs.org/dist/2.8.0/Chart.min.js"></script>
+</head>
+
+<body onload="nomeUsuario(), validarSessao()">
+<header>
+        <div class="navbar">
+            <h1 class="title_1">GOLDEN
+                <br>
+                ORDER
+            </h1>
+
+            <ul class="lista">
+                <li><a href="dashboard.html">Calcular</a></li>
+                <li><a href="comofunciona.html">Como funciona?</a></li>
+                <li><a href="grafico.html">Gráficos</a></li>
+                <li> <a onclick="limparSessao()">Sair</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <main class="main">
+            <aside id="aside">
+                <h3>
+                    <span class="bemvindo"><b>!!O gráfico mostra apenas aqueles cadastrados no site!!</b></span>
+                </h3>
+                <div class="form">
+                   <canvas id="canvas_grafico"></canvas>
+                </div>
+            </aside>
+        </main>
+</body>
+
+</html>
+
+<script>
+  
+    let proximaAtualizacao;
+  
+    window.onload = obterDadosGrafico(1);
+    function obterDadosGrafico(idPlataforma) {
+  
+      if (proximaAtualizacao != undefined) {
+        clearTimeout(proximaAtualizacao);
+      }
+  
+      fetch(`/medidas/ultimas/${idPlataforma}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    resposta.reverse();
+
+                    plotarGrafico(resposta, idPlataforma);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+        .catch(function (error) {
+          console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+    }
+  
+    function plotarGrafico(resposta, idPlataforma) {
+      console.log('iniciando plotagem do gráfico...');
+  
+      var dados = {
+        labels: [],
+        datasets: [
+
+          {
+            yAxisID: 'y-quantidade',
+            label: 'Quantidade de Usuarios',
+            borderColor: 'rgb(0, 0, 0)',
+            backgroundColor: '#f6a001',
+            fill: true,
+            data: []
+          }
+        ]
+      };
+  
+      for (i = 0; i < resposta.length; i++) {
+        var registro = resposta[i];
+        dados.labels.push(registro.NomePlataforma);
+        dados.datasets[0].data.push(registro.QuantidadeUsuarios);
+      }
+  
+      console.log(JSON.stringify(dados));
+  
+      var ctx = canvas_grafico.getContext('2d');
+      window.grafico_barra = Chart.Bar(ctx, {
+        data: dados,
+        options: {
+          responsive: true,
+          animation: { duration: 500 },
+          hoverMode: 'index',
+          stacked: false,
+          title: {
+            display: true,
+            text: 'Quantidade de Usuarios por plataformas'
+          },
+          scales: {
+            yAxes: [{
+              type: 'linear',
+              display: true,
+              position: 'left',
+              id: 'y-quantidade',
+              ticks: {
+                beginAtZero: true,
+                min: 0
+              }
+            }]
+          }
+        }
+      });
+  
+      setTimeout(() => atualizarGrafico(idPlataforma, dados), 2000);
+    }
+    function atualizarGrafico(idPlataforma, dados) {
+  
+      fetch(`/medidas/tempo-real/${idPlataforma}`, { cache: 'no-store' }).then(function (response) {
+        if (response.ok) {
+          response.json().then(function (novoRegistro) {
+  
+            console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+            console.log(`Dados atuais do gráfico: ${dados}`);
+  
+
+            dados.labels = [];
+            dados.datasets[0].data = [];
+  
+  
+            for (i = 0; i < novoRegistro.length; i++) {
+            var registro = novoRegistro[i];
+            dados.labels.push(registro.NomePlataforma);
+            dados.datasets[0].data.push(registro.QuantidadeUsuarios);
+            }
+            window.grafico_barra.update();
+  
+            proximaAtualizacao = setTimeout(() => atualizarGrafico(idPlataforma, dados), 2000);
+          });
+        } else {
+          console.error('Nenhum dado encontrado ou erro na API');W
+          proximaAtualizacao = setTimeout(() => atualizarGrafico(idPlataforma, dados), 2000);
+        }
+      })
+        .catch(function (error) {
+          console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+        });
+  
+    }
+
+    </script>
