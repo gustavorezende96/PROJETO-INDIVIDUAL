@@ -1,8 +1,7 @@
 
 
-
+var etapa = 0
 function proximaPagina(){
-    var etapa = 0
 
     if(etapa == 0){
         for(var contador = 1; contador > etapa; etapa++){
@@ -14,7 +13,6 @@ function proximaPagina(){
 }
 
 function paginaAnterior(){
-    etapa = 1
     if(etapa == 1){
         for(contador = 1; contador == etapa; etapa--){
             etapa0.style.display = ""
